@@ -1,0 +1,314 @@
+@charset "ISO-8859-1";
+body{
+	font-family:poppins;
+  	
+  	overflow: auto;
+		
+}
+
+.side-navbar{
+	height:100%;
+	width:260px;
+	position:fixed;
+	z-index:1;
+	top:0;
+	left:0;
+	background-color: #000080;
+	overflow-x:hidden;
+	padding-top:20px;
+}
+ .side-navbar a{
+ 
+ padding:50px 10px 10px 50px;
+ text-decoration: none;
+ font-size:18px;
+ font-weight:900;
+ display:block;
+ font-family: "Times New Roman", Times, serif;
+ color:	#f0ffff;
+ 
+ 
+ }
+ 
+ .side-navbar a:hover{
+ color:#ffff00;
+ -webkit-transform: scale(1.3);
+	transform: scale(1.3);	
+ 
+ }
+ 
+ 
+.header{
+	width:1200px;
+	height:100px;
+	margin:auto;
+	position: absolute;
+	left:18%;
+	top:-2%;
+	background-color: #000080;
+	position:fixed;
+	z-index:1;
+
+}
+
+.namescl{
+	color:#f0ffff;
+	left:28%;
+	position: absolute;
+	top:20%;
+}
+
+
+.logo{
+	left:65%;
+	position: absolute;
+	top:16%;
+}
+
+.insert{
+	color:#000080;
+	left:32%;
+	position: absolute;
+	top:20%;
+	font-family: "Times New Roman", Times, serif;
+	
+	
+}
+.insertInto{
+	left:25%;
+	position: absolute;
+	top:30%;
+	width:30%;
+	
+}
+
+
+
+
+
+
+input[type=text]{
+  width: 100%;
+  padding:  12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+select{
+  width: 30%;
+  padding:  12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+	
+}
+
+input[type=submit] {
+  width: 100%;
+  background-color:#4169e1;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+input[type=submit]:hover {
+  background-color: #191970;
+}
+div {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+
+input[type=text]:hover{
+	border: 2px solid #87ceeb;
+  	border-radius: 4px;
+}
+
+select:hover{
+	border: 2px solid #87ceeb;
+  	border-radius: 4px;
+ }
+ 
+option {
+  font-family: serif;
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 3;
+  padding: 10px 10px 10px 10px;
+}
+select option:hover {
+  background: #ff9500 -webkit-linear-gradient(bottom, #ff9500 0%, #ff9500 100%);
+  color: #fff;
+  
+ }
+ 
+
+ 
+.search{
+	color:#000080;
+	left:32%;
+	position: absolute;
+	top:120%;
+	font-family: "Times New Roman", Times, serif;
+	
+
+ }
+img{
+	left:60%;
+	position: absolute;
+	top:35%;
+	
+}
+
+.searchIn{
+	left:25%;
+	position: absolute;
+	top:130%;
+	width:30%;
+	
+	
+}
+
+select{
+  		width: 40%;
+	  padding:  12px 20px;
+	  margin: 8px 0;
+	  display: inline-block;
+	  border: 1px solid #ccc;
+	  border-radius: 4px;
+	  box-sizing: border-box;
+	
+}
+.btnS{
+	width:100%;
+  background-color:#4169e1;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+	
+}
+#parent {
+ font-family: "Times New Roman", Times, serif;
+  border-collapse: collapse;
+  width: 73%;
+  position: absolute;
+  top:155%;
+  left:23%;
+  
+ 	
+}
+
+#parent td{
+  border: 1px solid #ddd;
+  padding: 8px;
+  height: 30px;
+  
+}#parent tr{
+	border: 1px solid #ddd;
+  	padding: 5px;
+  	padding-top: 12px;
+    padding-bottom: 12px;
+    text-align:left;
+    background-color:#f5f5f5;
+   	color: black;
+}
+#parent tr:hover {background-color: #ddd;}
+
+#parent tr.topic{
+	background-color:#87ceeb;
+	text-align:center;
+	width:200px;
+	font-weight:900;
+	font-size:15px;
+	font-family: "Lucida Console", "Courier New", monospace;
+}
+
+        
+.update{
+  background-color: #000099;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+.delete{
+	background-color: red;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+	
+}
+
+ .mailR{
+	
+	width: 20%;
+  background-color:#4169e1;
+  color: white;
+  padding: 14px 0px;;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  position: absolute;
+  display:block;
+  text-decoration: none;
+  text-align:center;
+  left:68%;
+  top:25%;
+	
+	
+}
+
+
+ .down{
+ 	width: 10%;
+  background-color:#4169e1;
+  color: white;
+  padding: 14px 0px;;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  position: absolute;
+  display:block;
+  text-decoration: none;
+  text-align:center;
+  left:68%;
+  top:140%;
+	
+ 
+ 
+ 
+ 
+ 
+ 
+ }
+
+
+
+
+
+
+
+
+
+
+
+
+

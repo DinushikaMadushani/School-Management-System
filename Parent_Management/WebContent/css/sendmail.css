@@ -1,0 +1,146 @@
+@charset "ISO-8859-1";
+body  
+{  
+   font-family:poppins;
+   height:180%;
+  	overflow: auto;
+  	 
+} 
+
+.side-navbar{
+	height:100%;
+	width:260px;
+	position:fixed;
+	z-index:1;
+	top:0;
+	left:0;
+	background-color: #000080;
+	overflow-x:hidden;
+	padding-top:20px;
+}
+ .side-navbar a{
+ 
+ padding:50px 10px 10px 50px;
+ text-decoration: none;
+ font-size:18px;
+ font-weight:900;
+ display:block;
+ font-family: "Times New Roman", Times, serif;
+ color:	#f0ffff;
+ 
+ 
+ }
+ 
+ .side-navbar a:hover{
+ color:#ffff00;
+
+ }
+ 
+ .header{
+	width:1270px;
+	height:150px;
+	margin:auto;
+	position: absolute;
+	left:16%;
+	top:-2%;
+	background-color: #000080;
+	
+	z-index:1;
+
+}
+
+.namescl{
+	color:#f0ffff;
+	left:28%;
+	position: absolute;
+	top:20%;
+}
+
+
+.logo{
+	left:65%;
+	position: absolute;
+	top:16%;
+}
+ 
+.mail{
+	
+	width:30%;
+	position:absolute;
+	top:30%;
+	left:40%;
+	height:50%;
+	 z-index: 1;
+	
+}
+
+input[type=text]{
+	
+  width: 100%;
+  padding:  12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+
+}
+textarea{
+width: 100%;
+  padding:  12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+	
+}
+input[type=submit] {
+  width: 100%;
+  background-color:#4169e1;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+input[type=text]:hover{
+	border: 2px solid #87ceeb;
+  	border-radius: 4px;
+}textarea:hover{
+	border: 2px solid #87ceeb;
+  	border-radius: 4px;
+}
+
+
+input[type=submit]:hover {
+  background-color: #191970;
+}
+h1{
+	color:#000080;
+	left:40%;
+	position: absolute;
+	top:20%;
+	font-family: "Times New Roman", Times, serif;
+}
+
+p{
+	left:72%;
+	position: absolute;
+	top:35%;
+	font-family: "Times New Roman", Times, serif;
+	width:20%;
+	color:red;
+	height:50%;
+	background:	#f0e68c;
+	padding:14px 20px 5px;
+	font-size:18px;
+}
+.mess{
+	position:absolute;
+	top:40%;
+	left:13%;
+	width:35%;
+	height:65%;
+}

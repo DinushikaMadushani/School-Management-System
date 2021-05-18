@@ -1,0 +1,143 @@
+@charset "ISO-8859-1";
+body  
+{  
+   font-family:poppins;
+   height:180%;
+  	overflow: auto;
+  	 
+} 
+
+.side-navbar{
+	height:100%;
+	width:260px;
+	position:fixed;
+	z-index:1;
+	top:0;
+	left:0;
+	background-color: #000080;
+	overflow-x:hidden;
+	padding-top:20px;
+}
+ .side-navbar a{
+ 
+ padding:80px 10px 10px 50px;
+ text-decoration: none;
+ font-size:18px;
+ font-weight:900;
+ display:block;
+ font-family: "Times New Roman", Times, serif;
+ color:	#f0ffff;
+ 
+ 
+ }
+ 
+ .side-navbar a:hover{
+ color:#ffff00;
+
+ }
+ 
+ .header{
+	width:1270px;
+	height:150px;
+	margin:auto;
+	position: absolute;
+	left:16%;
+	top:-2%;
+	background-color: #000080;
+	position:fixed;
+	z-index:1;
+
+}
+
+.namescl{
+	color:#f0ffff;
+	left:28%;
+	position: absolute;
+	top:20%;
+}
+
+
+.logo{
+	left:65%;
+	position: absolute;
+	top:16%;
+}
+ 
+  
+.login{  
+		
+		left:25%; 
+        border-radius: 15px ;
+		position: absolute;
+		top:28%;
+		width:25%;
+		height:30%;
+          
+} 
+.parantLog{
+		position: absolute;
+		left:55%; 
+        border-radius: 15px ;
+		position: absolute;
+		top:28%;
+		width:25%;
+		height:30%;
+}
+		
+
+input[type=submit] {
+  width: 100%;
+  background-color:#4169e1;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+input[type=submit]:hover {
+  background-color: #191970;
+}  
+  
+  input[type=text]{
+  width: 100%;
+  padding:  12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+.school{
+	position: absolute;
+	top:65%;
+	left:25%; 
+}
+
+
+.logTopic{
+	left:47%;
+	position: absolute;
+	top:19%;
+	font-family: "Times New Roman", Times, serif;
+	font-size:25px;
+ 	font-weight:900;
+	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
