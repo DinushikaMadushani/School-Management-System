@@ -20,7 +20,7 @@
 		}
 		
 		
-		if((title == ""){
+		if((title == "")){
 			alert("Correcly enter  title");
 			document.form.title.value;
 			return false;

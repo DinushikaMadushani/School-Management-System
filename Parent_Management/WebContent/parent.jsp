@@ -32,7 +32,7 @@
 <head>
 <title>parent Manage</title>
 <link rel="stylesheet" type="text/css" href="css/parent.css">
-<script src=""></script>
+<script src="jquery-3.3.1.min.js"></script>
 <script type="text/javascript" src="js/js.js"></script>
 <script type="text/javascript">
 	
@@ -42,7 +42,7 @@
 		var sid = document.form.sid.value;
 	
 		if((nic == "")){
-			alert("please enter nic");
+			alert("Please enter NIC Number");
 			document.form.nic.value;
 			return false;
 		}
@@ -68,6 +68,22 @@
 </script> 
 </head>
 <body>
+<script>
+function makePdf(){
+	
+	var printMe = document.getElementById('parent');
+	var wme = window.open("","","width:800,height:900");
+	wme.document.write(printMe.outerHTML);
+	wme.document.close();
+	wme.focus();
+	wme.print();
+	wme.close();
+	}
+</script>
+
+
+
+
 <div class= "header">
 <img src="images/Picture1.png" class="logo" width="100px" height="120px"/>
 <h1 class="namescl">Viddyadarsha Maha Vidyalaya</h1>
@@ -84,7 +100,7 @@
 <a href ="#">Library Management</a>
 </div>
 
-<h1 class="insert">Insert new parent</h1>
+<h1 class="insert" id="insert">INSERT NEW PARENT DETAILS</h1>
 <div class="insertInto">
 <form method="post" action="process.jsp" name="form" onsubmit="return validSearch();">
 NIC:<input type="text" name="nic" id="nic"><br>
@@ -118,19 +134,64 @@ Class<select name="class" id="cls" >
 	<option value="F">F</option>
 	<option value="G">G</option>
 </select>
-<input type="submit" value="submit">
+
+<input type="submit" value="submit" >
+
+
 
 </form>
 
 </div>
-<img src="images/school.png" class="school" width="550px" height="600px"/>
+<img src="images/par.png" class="school" width="20%" />
+
+<div class="scrolbar">
+
+<table border="1" id="parent2">
+<thead>
+<tr class="topic">
+	<td>NIC Number</td>
+	<td>Name      </td>
+	<td>Student ID</td>
+	<td>Address   </td>
+	<td>Phone Number</td>
+	<td>Job Title </td>
+	<td>Grade</td>
+	<td>Class</td>
+</tr>
+</thead>
+
+<% try{
+connection = DriverManager.getConnection(connectionUrl+database, userid, password);
+statement=connection.createStatement();
+String sql2 ="select * from new_table";
+resultSet = statement.executeQuery(sql2);
+while(resultSet.next()){
+%>
+<tbody>
+<tr>
+	<td><%=resultSet.getString("nic") %></td>
+	<td><%=resultSet.getString("name") %></td>
+	<td><%=resultSet.getString("sid") %></td>
+	<td><%=resultSet.getString("address") %></td>
+	<td><%=resultSet.getString("phone") %></td>
+	<td><%=resultSet.getString("job") %></td>
+	<td><%=resultSet.getString("grade") %></td>
+	<td><%=resultSet.getString("class") %></td>
+</tr>
+</tbody>
+<% 	
+}
+connection.close();
+}catch (Exception e) {
+e.printStackTrace();
+}
+%>
+</table>
+</div>
 
 
 
-
-
-
-<h1 class="search">Search Parent Details</h1>
+<h1 class="search">SEARCH PARENT DETAILS</h1>
 <div class="searchIn">
 <form class="form" method="post" action="parent.jsp">
 	grade<select name="grade" id="grd"  >
@@ -148,6 +209,7 @@ Class<select name="class" id="cls" >
 		<option value="11">12</option>
 		<option value="11">13</option>
 	</select>
+	
 
 	Class<select name="clas" id="cls" >
 		<option value="A">A</option>
@@ -159,10 +221,22 @@ Class<select name="class" id="cls" >
 		<option value="G">G</option>
 	</select>
 
-<button type="submit" name="Search" class="btnS" >Search</button>
+<button type="submit" name="Search" class="btnS">Search</button>
 </form>
 </div>
 
+
+<%
+try{
+	connection = DriverManager.getConnection(connectionUrl+database, userid, password);
+	statement=connection.createStatement();
+	String sql ="select * from new_table where grade='"+grade+"' and class='"+clas+"'";
+	resultSet = statement.executeQuery(sql);
+	int i=0;
+	while(resultSet.next()){
+%>
+
+<div class="scrolbar">
 
 <table border="1" id="parent">
 <thead>
@@ -179,17 +253,6 @@ Class<select name="class" id="cls" >
 	<td>Delete</td>
 </tr>
 </thead>
-
-<%
-try{
-	connection = DriverManager.getConnection(connectionUrl+database, userid, password);
-	statement=connection.createStatement();
-	String sql ="select * from new_table where grade='"+grade+"' and class='"+clas+"'";
-	resultSet = statement.executeQuery(sql);
-	int i=0;
-	while(resultSet.next()){
-%>
-
 <tbody>
 <tr>
 	<td><%=resultSet.getString("nic") %></td>
@@ -205,6 +268,7 @@ try{
 	<td><a href="delete.jsp?nic=<%=resultSet.getString("nic") %>"><button type="button" class="delete">Delete</button></a></td>
 </tr>
 </tbody>
+
 <%
 	i++;
 }
@@ -214,9 +278,12 @@ catch (Exception e) {
 	e.printStackTrace();
 }
 %>
-</table>
 
-<a href="mailRequest.jsp" class="mailR">Update Request</a>
+</table>
+</div>
+<a href="#insert" class="InsertParent"><img src="images/ins.png" class="noti" width="40px" height="40px"/>Insert New Parent Details</a>
+<a href="mailRequest.jsp" class="mailR">Update Request<img src="images/noti.png" class="noti" width="50px" height="40px"/></a>
+<Button type="button" class="down" onclick="makePdf()"><img src="images/down.png" class="dit" width="50px" height="40px"/></Button>
 
 
 

@@ -17,8 +17,8 @@ try
 
 	int i=st.executeUpdate("insert into  emails (parentid,title,message)values('"+parentid+"','"+title+"','"+message+"')");
 	out.println("<script type='text/javascript'>");
-	out.println("alert('Data Insert Successfully!');");
-	out.println("location='myProfile.jsp'");
+	out.println("alert('Message Send Successfully!');");
+	out.println("location='sendmail.jsp'");
 	out.println("</script>");
 }
 catch(Exception e)

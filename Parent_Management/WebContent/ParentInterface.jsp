@@ -73,6 +73,6 @@ window.onclick = function(event) {
 <button onclick ="document.getElementById('#').style.display='block'" style="width:200px;" class="btn7">Staff Details</button>
 <img src="images/staff.png" class="staff" width="200px" height="200px"/>
 <button onclick ="document.getElementById('#').style.display='block'" style="width:200px;" class="btn8">Library</button><br>
-<img src="images/lib2.jpg" class="lib" width="200px" height="150px"/>
+<img src="images/lib2.png" class="lib" width="200px" height="150px"/>
 </body>
 </html>

@@ -50,14 +50,7 @@ function myFunction() {
 
 <h1 class="all">All requests </h1>
 
-<table border="1" id="message">
 
-<tr class="topic">
-	<td  class="id">parent id</td>
-	<td class="tit">title</td>
-	<td class="msg">message</td>
-	<td class="chk">checked</td>
-</tr>
 <%
 try{
 connection = DriverManager.getConnection(connectionUrl+database, userid, password);
@@ -66,11 +59,23 @@ String sql ="select * from emails";
 resultSet = statement.executeQuery(sql);
 while(resultSet.next()){
 %>
+
+<table border="1" id="message">
+
+<tr class="topic">
+	<td  class="id">Parent NIC Number</td>
+	<td class="tit">Title</td>
+	<td class="msg">Message</td>
+	<td class="update">Check</td>
+	<td class="chk">Delete</td>
+	
+</tr>
 <tr>
 <td><%=resultSet.getString("parentId") %></td>
 <td><%=resultSet.getString("title") %></td>
 <td><%=resultSet.getString("message") %></td>
-<td><a href="deleteMsg.jsp?parentid=<%=resultSet.getString("parentid") %>"><button type="button" class="checkbtn">checked</button></a></td>
+<td><a href="updateMsg.jsp?parentid=<%=resultSet.getString("parentid") %>"><button type="button" class="updatebtn">Check</button></a></td>
+<td><a href="deleteMsg.jsp?parentid=<%=resultSet.getString("parentid") %>"><button type="button" class="checkbtn">Delete</button></a></td>
 
 </tr>
 <%
@@ -81,5 +86,6 @@ e.printStackTrace();
 }
 %>
 </table>
+<a href="parent.jsp" class="mailR">Back</a>
 </body>
 </html>

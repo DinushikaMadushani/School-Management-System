@@ -20,13 +20,12 @@ try
 	Statement st=conn.createStatement();
 
 	int i=st.executeUpdate("insert into  new_table (nic,name,sid,address,phone,job,grade,class )values('"+nic+"','"+name+"','"+sid+"','"+address+"','"+phone+"','"+job+"','"+grade+"','"+clas+"')");
-	
 	out.println("<script type='text/javascript'>");
-	out.println("alert('Data Insert Successfully!');");
+	out.println("alert(' Data Insert Successfully!');");
 	out.println("location='parent.jsp'");
-	out.println("location.reload();'");
 	out.println("</script>");
 }
+
 catch(Exception e)
 {
 System.out.print(e);

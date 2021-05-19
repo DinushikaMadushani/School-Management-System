@@ -13,7 +13,7 @@ int i=st.executeUpdate(sql);
 
 
 out.println("<script type='text/javascript'>");
-out.println("alert('Updated Successfully!');");
+out.println("alert('Delete Message!');");
 out.println("location='mailRequest.jsp'");
 out.println("</script>");
 
